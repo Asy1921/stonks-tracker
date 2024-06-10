@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using api.Models;
 using Microsoft.AspNetCore.Identity;
+using UserSecrets;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,10 @@ namespace api.Data
         {
 
         }
+        //     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //    => optionsBuilder.UseCosmos(UserSecretsStorage.URI,
+        //     UserSecretsStorage.DefaultCosmosConnection,
+        //     databaseName: UserSecretsStorage.DBName);
 
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<Comment> Comments { get; set; }
